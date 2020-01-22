@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Creator: Chris Vo
+        Date: 07/16/2018
+    -->
+    <title>Chris Vo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="img/clogo.png" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <script src="js/terminal.js"></script>
+    <script src="js/general.js"></script>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(function () {
+            $("#includedModal").load("modal.html");
+        });
+    </script>
+
+</head>
+
+<body id="intro" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myNavbar">
+                    CHRIS VO
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#terminal"><span class="glyphicon glyphicon-console"></span></a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li><a target='_blank' href="/vochris-resume.pdf">resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INTRO ontainer -->
+    <div class="container-fluid bg-1 text-center">
+        <h3 class="margin">oh! hello ~</h3>
+        <img src="img/myphoto.jpeg" class="img-responsive img-circle margin" style="display:inline" alt="Chris Vo" width="350" height="350">
+        <h3>i am CHRIS VO</h3>
+    </div>
+
+    <!-- TERMINAL container -->
+    <div class="container-fluid bg-2 text-center" id="terminal">
+        <h3 class="margin">Get to know me!</h3>
+        <p class="jk"><i><b>In a rush?</b></i> &nbsp; Scroll down for more info! <br /> <i><b>Bored?</b></i> &nbsp; Play with this terminal!</p>
+        <br />
+
+        <div class="cmd-task">
+            <span class="window-icon red"></span>
+            <span class="window-icon yellow"></span>
+            <span class="window-icon green"></span>
+        </div>
+        <div class="cmd-container">
+            <div id="cmd-output"></div>
+            <form>
+                <input id="cmd-input" type="text" placeholder="Enter anything or 'help'..." autocomplete="off">
+            </form>
+            <div class="cmd-end"></div>
+        </div>
+    </div>
+
+    <!-- ABOUT container -->
+    <div class="container-fluid bg-3 text-center" id="about">
+        <h3 class="margin">About me</h3>
+  
+        <p class="ttitle">background</p>
+        <div class="" style="width: 50%; margin: auto;">
+            <p>I am going to graduate from <b>La Salle University</b> soon in <b>January 2019</b>!<br />
+            Beside coding, I have many hobbies that I wouldn't say I'm an expert!
+            </p>
+        </div> 
+        <br />
+
+        <p class="ttitle">skill</p>
+        <table class="table" style="width:50%; margin:auto;">
+            <thead class="thead">
+                <tr>
+                    <th class="th">Languages</th>
+                    <th class="th">Tools</th>
+                    <th class="th">Design</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Git</td>
+                    <td>Photoshop</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Heroku</td>
+                    <td>Illustrator</td>
+                </tr>
+                <tr>
+                    <td>PHP &amp; SQL</td>
+                    <td>Jira</td>
+                    <td>inDesign</td>
+                </tr>
+                <tr>
+                    <td>JSON</td>
+                    <td>Bitbucket</td>
+                    <td>Unity</td>
+                </tr>
+                <tr>
+                    <td>HTML &amp; CSS</td>
+                    <td>XAMPP</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <br />
+        <p class="ttitle">Language</p><br/>
+        <div>
+            <button class="btnLang" onclick="moveVN()" data-toggle="tooltip" data-placement="top" title="" 
+                    data-original-title="Tiếng Việt hơi bị giỏi đấy nha! Chỉ lâu lâu bị lẹo lưỡi thôi... Hồi đấy mê nhất là viết truyện về gia đình và bạn bè." >
+                Vietnamese
+            </button>
+
+            <button class="btnLang" onclick="moveEN()" data-toggle="tooltip" data-placement="top" title="" 
+                    data-original-title="My English is bearable! I got still thick accent though." >
+                English
+            </button>
+            <button class="btnLang" onclick="moveJP()" data-toggle="tooltip" data-placement="top" title="" 
+                    data-original-title="にほんごがすこししかはなせません。いま日本語を勉強中ですので、少し下手ですがお許しください。" >
+                Japanese
+            </button>
+        </div>
+        <br />
+
+        <div id="myProgress">
+            <div id="myBar">10%</div>
+        </div>
+ 
+    </div> <!--end ABOUT-->
+
+
+    <!-- PROJECTS container -->
+    <div class="container-fluid bg-5 text-center" id="projects">
+        <h3 class="margin">Projects</h3>
+
+        <ul class="nav nav-tabs" style="width: 90%;">
+            <li class="active"><a data-toggle="tab" href="#web">Web Develope</a></li>
+            <!--<li><a data-toggle="tab" href="#android">Android App.</a></li>-->
+            <li><a data-toggle="tab" href="#graphic">Graphic Design</a></li>
+            <li><a data-toggle="tab" href="#game">Game Dev. (Unity)</a></li>
+            <li><a data-toggle="tab" href="#engineer">Engineer (Arduino)</a></li>
+        </ul>
+
+        <!-- TAB -->
+        <div class="tab-content">
+            <br />
+            <br />
+
+            <!-- WEB -->
+            <div id="web" class="tab-pane fade in active">
+                <h5>Web Dev. & Design</h5>
+                <p>These are the website that I built in the past with a team and some I did it on my own. Click on them to learn more.</p>
+
+                <br />
+
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="img/works/student4student.png" alt="Student 4 Student" width="400" height="300" data-toggle="modal" data-target="#s4s" style="cursor: pointer;"><br />
+                            <p><strong>STUDENT 4 STUDENT</strong></p>
+                            <p><strong><em><small>Spring 2018</small></em></strong></p>
+                            <p>Built with a team of 5 for senior project. Similar to Craiglist, but only for students within the campus.</p>
+                            <button class="btn" data-toggle="modal" data-target="#s4s">More >></button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="projects/imgage/cfood-homepage.png" alt="C Food" width="400" height="300" data-toggle="modal" data-target="#cfood" style="cursor: pointer;"><br />
+                            <p><strong>C FOOD</strong></p>
+                            <p><strong><em><small>Fall 2017</small></em></strong></p>
+                            <p>Say it like "Sea Food" and "See Food" combined! This website is a mocked magazine about Sea Food, which you "see sea food" and you want to eat it.</p>
+                            <button class="btn" data-toggle="modal" data-target="#cfood">More >></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="includedModal"></div>
+
+            <!-- end WEB -->
+
+            <div id="android" class="tab-pane fade">
+                <h5>Android App</h5>
+                <p>For now, these are just photo of all the apps that I made, until I find a place where I can run these app demo online.</p>
+            </div>
+
+            <div id="graphic" class="tab-pane fade">
+                <h5>Graphic Design</h5>
+                <p>I took one graphic design class at La Salle University, if that counts!</p>
+                <br />
+
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="projects/magazine/magazine.png" alt="Vietnam Travel Magazine" width="300" height="400" onclick="window.open('https://indd.adobe.com/view/97e91832-4604-4e6f-bed2-0171b4e039de','_blank')" style="cursor: pointer;"><br />
+                            <p><strong>VIETNAM TRAVEL MAGAZINE</strong></p>
+                            <p><strong><em><small>Fall 2017</small></em></strong></p>
+                            <p>A magazine about travel around Vietnam with bunch of dummy text, and google images.</p>
+                            <button class="btn" onclick="window.open('https://indd.adobe.com/view/97e91832-4604-4e6f-bed2-0171b4e039de','_blank')">Read >></button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="projects/imgage/binary-band-poster.jpg" alt="Binary Band Poster" width="300" height="400">
+                            <br />
+                            <p><strong>BINARY BAND POSTER</strong></p>
+                            <p><strong><em><small>Fall 2017</small></em></strong></p>
+                            <p>Group project of 4 members, this was suppose to be a design of a poster and a carpet, which you can put it on the wall or the floor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="game" class="tab-pane fade">
+                <h5>Game Design</h5>
+                <p>Through Coursera, I learned Game Design from Michigan State University (when it used to be free LOL).</p>
+
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="projects/imgage/rollermadness.png" alt="Vietnam Travel Magazine" width="400" height="300" onclick=" window.open('projects/WebGL/index.html','_blank')"  style="cursor: pointer;"><br />
+                            <p><strong>Rolling Ball</strong></p>
+                            <p><strong><em><small>Summer 2017</small></em></strong></p>
+                            <p>A mini web game about challenging user to get as high score as possible! This is like a ball version of Flappy Bird.</p>
+                            <button class="btn" onclick=" window.open('projects/WebGL/index.html','_blank')">Play >></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="engineer" class="tab-pane fade">
+                <h5>Engineer using Arduino</h5>
+                <p>I'm still newbie in this subject, but I get really happy when something I built works! Who doesn't?!</p>
+
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="projects/robot/robot2.jpg" alt="High School Robotic" width="400" height="300"  style="cursor: pointer;"  data-toggle="modal" data-target="#hsrobot"><br />
+                            <p><strong>ROBOTIC</strong></p>
+                            <p><strong><em><small>Phila. HS for Girls</small></em></strong></p>
+                            <p>Taking place in my high school year, my robotic team built both water and ground robots for the competition</p>
+                            <button class="btn" data-toggle="modal" data-target="#hsrobot">More >></button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end TAB -->
+
+        </div>
+    </div> <!-- end PROJECT-->
+    <!-- CONTACT container -->
+    <div id="contact" class="container">
+        <h3 class="margin text-center">Wanna chit chat?</h3>
+        <p class="text-center"><em>I'm a bit awkward, but I don't see why not! Let's talk!</em></p>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <p><span class="glyphicon glyphicon-map-marker"></span>&ensp;Philadelphia, PA</p>
+                <p>
+                    <span class="glyphicon glyphicon-phone"></span>&ensp;(&#50;&#54;&#55;) &#50;&#50;&#54;-&#55;&#49;&#49;&#55;
+                </p>
+                <p><span class="glyphicon glyphicon-envelope"></span>&ensp;vochris3&#64;gmail&#46;com</p>
+            </div>
+
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="fullname" placeholder="Full Name *" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email *    xxx@mail.com" type="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="phone" name="phone" placeholder="Phone *    (xxx) xxx-xxxx" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="company" name="company" placeholder="Company" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <input class="form-control" id="subj" name="subj" placeholder="Subject *" type="text">
+                    </div>
+                </div>
+                <textarea class="form-control" id="content" name="content" placeholder="Content *" rows="5"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button id="btnSubmit" onclick="sendMail(); return false" class="btn pull-right" type="submit"><span class="glyphicon glyphicon-send"></span>&emsp;Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Maps -->
+    <!--<div id="googleMap"></div>
+    <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(39.952583, -75.165222);
+            var mapProp = { center: myCenter, zoom: 12, scrollwheel: false, draggable: false, mapTypeId: google.maps.MapTypeId.ROADMAP };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({ position: myCenter });
+            marker.setMap(map);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGozxA74oyX7TaIPPbewGN8VvEaSWldfo&callback=myMap"></script>-->
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#intro" data-toggle="tooltip" title="BACK TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br>
+        <p>Create by <a href="https://chrisvo3.github.io/" data-toggle="tooltip" title="Chris Vo">Chris Vo</a></p>
+
+        <p>
+            <a target="_blank" href="https://www.linkedin.com/in/chrisvo3/" data-toggle="tooltip" title="linkedin"><i class="fa fa-linkedin"></i></a>&nbsp;
+            <a target="_blank" href="https://github.com/chrisvo3" data-toggle="tooltip" title="github"><span class="fa fa-github"></span></a>&nbsp;
+            <a target="_blank" href="mailto:vochris3%40gmail%2ecom" data-toggle="tooltip" title="email"><span class="glyphicon glyphicon-envelope"></span></a>&nbsp;
+            <a target="_blank" href="vochris-resume.pdf" data-toggle="tooltip" title="resume"><span class="glyphicon glyphicon-paperclip"></span></a>&nbsp;
+        </p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#intro']").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        })
+    </script>
+
+    <!-- Default Statcounter code for Portfolio Web https://chrisvo3.github.io/ -->
+    <script type="text/javascript">
+        var sc_project = 11793870;
+        var sc_invisible = 1;
+        var sc_security = "8870456a";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter">
+            <a title="Web Analytics Made Easy - StatCounter" href="http://statcounter.com/" target="_blank">
+                <img class="statcounter" src="//c.statcounter.com/11793870/0/8870456a/1/" alt="Web Analytics Made Easy - StatCounter">
+            </a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>

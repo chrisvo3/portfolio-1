@@ -1,0 +1,427 @@
+﻿body, html {
+    /*font: 400 15px/1.8 Lato, sans-serif;*/
+    color: #777;
+    font-family: "Inconsolata", sans-serif;
+    height: 100%;
+}
+
+.margin {
+    margin-bottom: 45px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/* Screen Reader */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.bg-1 { /* into */
+    background: #2d2d30; /* dark grey */
+    color: #bdbdbd;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+    .bg-1 h3 {
+        color: #fff;
+    }
+
+    .bg-1 p {
+        font-style: italic;
+    }
+
+.bg-2 { /* terminal */
+    background-color: #474e5d; /* dark blue */
+    color: #ffffff;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+    .bg-2 h3 {
+        color: #fff;
+    }
+
+    .jk {
+        margin-top: -20px;
+    }
+
+.bg-3 { /* about */
+    background-color: #dddddd; /* light gray */
+    color: #494949;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.bg-4 {
+    background-color: #6aa0aa; /* black gray */
+    color: #fff;
+}
+
+.bg-5 { /* project */
+    background-color: #eeeeee; /* almost white */
+    color: #333333;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+h3 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 20px;
+    color: #111;
+}
+
+h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 8px;
+    font-size: 18px;
+    color: #111;
+}
+
+h5 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 6px;
+    font-size: 16px;
+    color: #111;
+}
+.font-black {
+    color: black;
+}
+
+.container {
+    padding: 80px 120px;
+}
+
+/* Terminal */
+.cmd-task {
+    background: #cccccc;
+    width: 60%;
+    height: 30px;
+    border: 1px solid;
+    border-color: #8f8b90;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: auto;
+}
+
+.window-icon {
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    float: left;
+    margin-top: 7px;
+}
+
+    .window-icon:hover {
+        cursor: pointer;
+    }
+
+    .red {
+        background-color: #fc5753; /* Yosemite Red traffic-light */
+        border: 1px solid #df4744;
+        margin-left: 15px;
+    }
+
+        .red:active {
+            background-color: #df4744;
+            border: 1px solid #fc5753;
+        }
+
+    .yellow {
+        background-color: #fdbc40; /* Yosemite Red traffic-light */
+        border: 1px solid #de9f34;
+        margin-left: 8px;
+    }
+
+        .yellow:active {
+            background-color: #de9f34;
+            border: 1px solid #fdbc40;
+        }
+
+    .green {
+        background-color: #33c748; /* Yosemite Red traffic-light */
+        border: 1px solid #27aa35;
+        margin-left: 8px;
+    }
+
+        .green:active {
+            background-color: #27aa35;
+            border: 1px solid #33c748;
+        }
+
+
+.cmd-container {
+    background-color: #383737; /* cmd clay color */
+    width: 60%;
+    height: 340px;
+    padding: 12px 0 0 0;
+    margin: auto;
+    font-family: 'Monaco', 'Courier New';
+}
+
+#cmd-output {
+    text-align: left;
+    height: 315px;
+    padding: 10px;
+    overflow-y: auto;
+    resize: none;
+    border: none;
+    font-size: 12px;
+    line-height: 28px;
+    display: block;
+    color: #a4a4a4; /* light grey */
+}
+
+    .user-cmd {
+        color: #29db3b; /* cmd green txt */
+        display: inline-block;
+    }
+
+    .cmd-answer {
+        margin-top: -15px;
+        margin-left: 2em;
+    }
+
+    .custom-cnt {
+        margin-top: -15px;
+        margin-left: 0;
+        padding-right: 0;
+        list-style-type: none;
+    }
+
+    .tabline {
+        margin-left: 4em;
+        margin-top: -5px;
+    }
+    
+    .next-line {
+        margin-left: 3.5em;
+        margin-top: -10px;
+    }
+
+    .clink {
+        color: #c26868;
+    }
+
+    .clink:hover {
+        cursor: pointer;
+        background-color: #c26868;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+#cmd-input {
+    background-color: #383737; /* cmd clay dark */
+    display: block;
+    border: none;
+    width: 100%;
+    color: white;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    font-family: 'Monaco', 'Courier New';
+}
+
+.cmd-end {
+    background: #cccccc; /* light tab gray */
+    width: 100%;
+    height: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: auto;
+}
+
+/* Terminal Scrollbar */
+#cmd-output::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+#cmd-output::-webkit-scrollbar {
+    width: 12px;
+    background-color: #fafafa;
+}
+
+#cmd-output::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #c2c2c2;
+}
+
+
+/* Send Button */
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    transition: .2s;
+}
+
+.btn:hover {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn::after {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Modal Button */
+.ttitle {
+    color: white;
+    width: 10%;
+    margin: auto;
+    background-color: #007bff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.thumbnail {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.thumbnail img {
+    border-radius: 10px;
+}
+
+
+.thead {
+    text-transform: uppercase;
+}
+
+.th {
+    text-align: center;
+    color: #007bff;
+}
+
+/* About */
+.btnLang {
+    background-color: transparent;
+    text-transform: lowercase;
+    font-weight: 700;
+    border: none;
+    border-bottom: 3px solid #494949;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.btnLang:hover {
+    background-color: #494949;
+    color: #dddddd;
+    border-radius: 5px;
+}
+
+.btnLang:focus {
+    outline: 0;
+}
+
+#myProgress {
+    width: 50%;
+    margin: auto;
+    background-color: #2d2d30;
+    border-radius: 10px;
+    border: 2px solid #2d2d30;
+}
+
+#myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+    border-radius: 10px;
+}
+
+
+/* PROJECTS */
+.tools {
+    background-color: #2d2d30;
+    color: #cccccc;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+/* Map */
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/* Navigation */
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+    .navbar li a, .navbar .navbar-brand {
+        color: #d5d5d5 !important;
+    }
+
+    .navbar-nav li a:hover {
+        color: #fff !important;
+    }
+
+    .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: #29292c !important;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+    }
+
+/* Footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+    footer a {
+        color: #f5f5f5;
+    }
+
+        footer a:hover {
+            color: #777;
+            text-decoration: none;
+        }
+
+.form-control {
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
